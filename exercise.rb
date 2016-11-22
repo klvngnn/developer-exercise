@@ -46,8 +46,7 @@ class Exercise
         sum += fibnum 
       end
     end
-
-    return sum
+    sum
   end
 
 end
