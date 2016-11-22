@@ -32,7 +32,22 @@ class Exercise
   # and the sum of its even numbers is (2 + 8) = 10
   def self.even_fibonacci(nth)
     # TODO: Implement this method
+    f_arry = [1,1]
+    sum = 0
+    i = 1
 
+    while i < (nth - 1) do
+      f_arry.push(f_arry[i] + f_arry[(i-1)])
+      i += 1
+    end
+
+    f_arry.each do |fibnum|
+      if fibnum.even?
+        sum += fibnum 
+      end
+    end
+
+    return sum
   end
 
 end
